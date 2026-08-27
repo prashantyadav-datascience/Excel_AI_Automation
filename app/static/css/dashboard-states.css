@@ -1,0 +1,333 @@
+/* =========================================================
+   EXCEL AI AUTOMATION
+   UNIFIED DASHBOARD STATES
+
+   ========================================================= */
+
+
+/* =========================================================
+   STATE CONTAINER
+   ========================================================= */
+
+.dashboard-state {
+    width: 100%;
+    min-height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 35px 20px;
+}
+
+
+/* =========================================================
+   STATE CARD
+   ========================================================= */
+
+.dashboard-state-card {
+    width: 100%;
+    max-width: 600px;
+
+    text-align: center;
+
+    padding: 35px 25px;
+
+    border: 1px solid #e9ecef;
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================================================
+   STATE ICON
+   ========================================================= */
+
+.dashboard-state-icon {
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 25px;
+}
+
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.dashboard-state-loading
+.dashboard-state-icon {
+
+    background: #eef4ff;
+    color: #0d6efd;
+
+}
+
+
+.dashboard-state-title {
+
+    margin-bottom: 8px;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    color: #212529;
+}
+
+
+.dashboard-state-message {
+
+    margin-bottom: 20px;
+
+    color: #6c757d;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   SPINNER
+   ========================================================= */
+
+.dashboard-spinner {
+
+    width: 28px;
+    height: 28px;
+
+    border: 3px solid #dbe7ff;
+    border-top-color: #0d6efd;
+
+    border-radius: 50%;
+
+    animation:
+        dashboardSpin 0.8s linear infinite;
+
+}
+
+
+@keyframes dashboardSpin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================================================
+   SKELETON
+   ========================================================= */
+
+.dashboard-skeleton {
+
+    width: 100%;
+
+    padding: 20px;
+
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #edf0f3;
+
+}
+
+
+.dashboard-skeleton-line {
+
+    height: 14px;
+
+    margin-bottom: 12px;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f1f3f5 25%,
+            #e9ecef 50%,
+            #f1f3f5 75%
+        );
+
+    background-size: 200% 100%;
+
+    animation:
+        dashboardSkeleton 1.4s infinite;
+
+}
+
+
+.dashboard-skeleton-line.large {
+
+    width: 65%;
+    height: 25px;
+
+}
+
+
+.dashboard-skeleton-line.medium {
+
+    width: 80%;
+
+}
+
+
+.dashboard-skeleton-line.small {
+
+    width: 45%;
+
+}
+
+
+@keyframes dashboardSkeleton {
+
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+
+}
+
+
+/* =========================================================
+   EMPTY
+   ========================================================= */
+
+.dashboard-state-empty
+.dashboard-state-icon {
+
+    background: #f8f9fa;
+    color: #6c757d;
+
+}
+
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.dashboard-state-error
+.dashboard-state-icon {
+
+    background: #fff0f0;
+    color: #dc3545;
+
+}
+
+
+/* =========================================================
+   AUTH ERROR
+   ========================================================= */
+
+.dashboard-state-auth
+.dashboard-state-icon {
+
+    background: #fff7e6;
+    color: #fd7e14;
+
+}
+
+
+/* =========================================================
+   SUCCESS
+   ========================================================= */
+
+.dashboard-state-success
+.dashboard-state-icon {
+
+    background: #eaf8f0;
+    color: #198754;
+
+}
+
+
+/* =========================================================
+   STATE BUTTONS
+   ========================================================= */
+
+.dashboard-state-btn {
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 9px 18px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.dashboard-state-btn:hover {
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.12);
+
+}
+
+
+.dashboard-retry-btn {
+
+    background: #0d6efd;
+    color: #ffffff;
+
+}
+
+
+.dashboard-login-btn {
+
+    background: #fd7e14;
+    color: #ffffff;
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+    .dashboard-state-card {
+
+        padding: 25px 18px;
+
+    }
+
+
+    .dashboard-state-title {
+
+        font-size: 16px;
+
+    }
+
+}

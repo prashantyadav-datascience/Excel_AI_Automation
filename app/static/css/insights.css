@@ -1,0 +1,1128 @@
+/* =========================================================
+   EXCEL AI AUTOMATION
+   AI BUSINESS INSIGHTS
+   PREMIUM INTERACTIVE UI
+========================================================= */
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.insights-section {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.insights-section .section-title {
+    font-weight: 700;
+    letter-spacing: -0.3px;
+}
+
+.insights-section .eyebrow {
+    margin-bottom: 5px;
+}
+
+
+/* =========================================================
+   AI STATUS
+========================================================= */
+
+#insightsStatus {
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+#insightsStatus:not(.d-none) {
+    animation: statusSlide 0.35s ease;
+}
+
+
+/* =========================================================
+   MAIN INSIGHT CARDS
+========================================================= */
+
+.insight-card {
+    position: relative;
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e8eaf0;
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(15, 23, 42, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.insight-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 16px 35px rgba(15, 23, 42, 0.10);
+
+    border-color: #d9dce6;
+}
+
+
+/* =========================================================
+   TOP GLOW
+========================================================= */
+
+.insight-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 3px;
+
+    background: linear-gradient(
+        90deg,
+        #6366f1,
+        #8b5cf6,
+        #06b6d4
+    );
+
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.insight-card-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 20px 20px 16px;
+
+    border-bottom: 1px solid #eef0f4;
+}
+
+
+.insight-card-header h5 {
+    margin: 0;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    color: #111827;
+}
+
+
+.insight-card-header small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #6b7280;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   AI ICON
+========================================================= */
+
+.insight-icon {
+    width: 46px;
+    height: 46px;
+
+    min-width: 46px;
+
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    font-size: 19px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.insight-card:hover .insight-icon {
+    transform: rotate(-4deg) scale(1.08);
+}
+
+
+/* BLUE AI ICON */
+
+.insight-icon-blue {
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #6366f1
+    );
+
+    box-shadow:
+        0 7px 18px rgba(79, 70, 229, 0.25);
+}
+
+
+/* GREEN AI ICON */
+
+.insight-icon-green {
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #059669,
+        #10b981
+    );
+
+    box-shadow:
+        0 7px 18px rgba(16, 185, 129, 0.25);
+}
+
+
+/* =========================================================
+   AI PULSE EFFECT
+========================================================= */
+
+.insight-icon::after {
+    content: "";
+
+    position: absolute;
+
+    inset: -4px;
+
+    border-radius: 17px;
+
+    border: 1px solid currentColor;
+
+    opacity: 0;
+
+    animation: aiPulse 2.4s infinite;
+}
+
+
+/* =========================================================
+   LIST CONTAINERS
+========================================================= */
+
+.insight-list,
+.recommendation-list {
+    padding: 18px 20px 20px;
+}
+
+
+/* =========================================================
+   DYNAMIC INSIGHT ITEM
+========================================================= */
+
+.ai-insight-item {
+    position: relative;
+
+    display: flex;
+
+    gap: 13px;
+
+    padding: 15px;
+
+    margin-bottom: 12px;
+
+    border: 1px solid #e8eaf0;
+
+    border-radius: 14px;
+
+    background: #fafbff;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.ai-insight-item:last-child {
+    margin-bottom: 0;
+}
+
+
+.ai-insight-item:hover {
+    transform: translateX(4px);
+
+    background: #ffffff;
+
+    border-color: #cfd5ff;
+
+    box-shadow:
+        0 8px 22px rgba(79, 70, 229, 0.08);
+}
+
+
+/* =========================================================
+   INSIGHT NUMBER
+========================================================= */
+
+.ai-insight-number {
+    width: 34px;
+    height: 34px;
+
+    min-width: 34px;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #7c3aed
+    );
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 5px 12px rgba(79, 70, 229, 0.22);
+}
+
+
+/* =========================================================
+   INSIGHT CONTENT
+========================================================= */
+
+.ai-insight-content {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.ai-insight-label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 5px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    color: #4f46e5;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.4px;
+}
+
+
+.ai-insight-text {
+    color: #374151;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   VIEW DETAILS
+========================================================= */
+
+.ai-insight-action {
+    margin-top: 8px;
+
+    font-size: 12px;
+
+    color: #6366f1;
+
+    font-weight: 600;
+
+    opacity: 0;
+
+    transform: translateY(3px);
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.ai-insight-item:hover .ai-insight-action {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   EXPANDED INSIGHT
+========================================================= */
+
+.ai-insight-extra {
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transition:
+        max-height 0.35s ease,
+        opacity 0.25s ease;
+}
+
+
+.ai-insight-item.expanded .ai-insight-extra {
+    max-height: 150px;
+
+    opacity: 1;
+
+    margin-top: 10px;
+
+    padding-top: 10px;
+
+    border-top: 1px dashed #dfe3eb;
+}
+
+
+.ai-insight-item.expanded {
+    border-color: #a5b4fc;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 10px 25px rgba(79, 70, 229, 0.10);
+}
+
+
+/* =========================================================
+   RECOMMENDATION ITEM
+========================================================= */
+
+.ai-recommendation-item {
+    position: relative;
+
+    display: flex;
+
+    gap: 13px;
+
+    padding: 15px;
+
+    margin-bottom: 12px;
+
+    border: 1px solid #e5eee9;
+
+    border-radius: 14px;
+
+    background: #f8fffb;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.ai-recommendation-item:last-child {
+    margin-bottom: 0;
+}
+
+
+.ai-recommendation-item:hover {
+    transform: translateX(4px);
+
+    background: #ffffff;
+
+    border-color: #a7e5c8;
+
+    box-shadow:
+        0 8px 22px rgba(16, 185, 129, 0.08);
+}
+
+
+/* =========================================================
+   RECOMMENDATION NUMBER
+========================================================= */
+
+.ai-recommendation-number {
+    width: 34px;
+    height: 34px;
+
+    min-width: 34px;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        135deg,
+        #059669,
+        #10b981
+    );
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 5px 12px rgba(16, 185, 129, 0.22);
+}
+
+
+/* =========================================================
+   RECOMMENDATION CONTENT
+========================================================= */
+
+.ai-recommendation-content {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.ai-recommendation-label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 5px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    color: #059669;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.4px;
+}
+
+
+.ai-recommendation-text {
+    color: #374151;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   RECOMMENDATION ACTION
+========================================================= */
+
+.ai-recommendation-action {
+    margin-top: 8px;
+
+    font-size: 12px;
+
+    color: #059669;
+
+    font-weight: 600;
+
+    opacity: 0;
+
+    transform: translateY(3px);
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.ai-recommendation-item:hover
+.ai-recommendation-action {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   EXPANDED RECOMMENDATION
+========================================================= */
+
+.ai-recommendation-extra {
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transition:
+        max-height 0.35s ease,
+        opacity 0.25s ease;
+}
+
+
+.ai-recommendation-item.expanded
+.ai-recommendation-extra {
+
+    max-height: 150px;
+
+    opacity: 1;
+
+    margin-top: 10px;
+
+    padding-top: 10px;
+
+    border-top: 1px dashed #cfe7db;
+}
+
+
+.ai-recommendation-item.expanded {
+
+    border-color: #6ee7b7;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 10px 25px rgba(16, 185, 129, 0.10);
+}
+
+
+/* =========================================================
+   AI BADGE
+========================================================= */
+
+.ai-live-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 4px 9px;
+
+    border-radius: 20px;
+
+    background: #ecfdf5;
+
+    color: #059669;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.4px;
+
+    text-transform: uppercase;
+}
+
+
+.ai-live-dot {
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #10b981;
+
+    animation: liveDot 1.5s infinite;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.insight-loading {
+
+    min-height: 110px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+.insight-loading .spinner-border {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.insight-empty-state {
+
+    padding: 25px 15px;
+
+    text-align: center;
+
+    color: #6b7280;
+}
+
+
+.insight-empty-icon {
+
+    width: 48px;
+    height: 48px;
+
+    margin: 0 auto 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #f3f4f6;
+
+    color: #6b7280;
+
+    font-size: 18px;
+}
+
+
+.insight-empty-state strong {
+    display: block;
+
+    color: #374151;
+
+    margin-bottom: 4px;
+}
+
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.insights-summary {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 14px;
+
+    padding: 18px;
+
+    border: 1px solid #e8eaf0;
+
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 6px 20px rgba(15, 23, 42, 0.04);
+}
+
+
+.summary-item {
+
+    padding: 12px 14px;
+
+    border-right: 1px solid #eef0f4;
+}
+
+
+.summary-item:last-child {
+    border-right: none;
+}
+
+
+.summary-label {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 11px;
+
+    color: #6b7280;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+
+    font-weight: 600;
+}
+
+
+.summary-item strong {
+
+    display: block;
+
+    color: #111827;
+
+    font-size: 14px;
+
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   REFRESH BUTTON
+========================================================= */
+
+#refreshInsightsButton {
+
+    border-radius: 10px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+#refreshInsightsButton:hover {
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 15px rgba(13, 110, 253, 0.15);
+}
+
+
+#refreshInsightsButton.loading {
+
+    pointer-events: none;
+
+    opacity: 0.75;
+}
+
+
+#refreshInsightsButton.loading i {
+
+    animation: rotateIcon 0.8s linear infinite;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.insight-error {
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    background: #fff5f5;
+
+    border: 1px solid #fecaca;
+
+    color: #991b1b;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes aiPulse {
+
+    0% {
+        transform: scale(0.9);
+        opacity: 0.35;
+    }
+
+    70% {
+        transform: scale(1.18);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1.18);
+        opacity: 0;
+    }
+}
+
+
+@keyframes liveDot {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: scale(0.7);
+    }
+}
+
+
+@keyframes rotateIcon {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes statusSlide {
+
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes insightAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   DARK MODE SUPPORT
+========================================================= */
+
+body.dark-mode .insight-card {
+
+    background: #151923;
+
+    border-color: #272d3a;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.20);
+}
+
+
+body.dark-mode .insight-card-header {
+
+    border-color: #272d3a;
+}
+
+
+body.dark-mode .insight-card-header h5 {
+
+    color: #f3f4f6;
+}
+
+
+body.dark-mode .insight-card-header small {
+
+    color: #9ca3af;
+}
+
+
+body.dark-mode .ai-insight-item {
+
+    background: #1a1f2b;
+
+    border-color: #2d3443;
+}
+
+
+body.dark-mode .ai-insight-item:hover {
+
+    background: #202634;
+
+    border-color: #6366f1;
+}
+
+
+body.dark-mode .ai-insight-text {
+
+    color: #d1d5db;
+}
+
+
+body.dark-mode .ai-recommendation-item {
+
+    background: #17221e;
+
+    border-color: #294137;
+}
+
+
+body.dark-mode .ai-recommendation-item:hover {
+
+    background: #1d2924;
+
+    border-color: #10b981;
+}
+
+
+body.dark-mode .ai-recommendation-text {
+
+    color: #d1d5db;
+}
+
+
+body.dark-mode .insights-summary {
+
+    background: #151923;
+
+    border-color: #272d3a;
+}
+
+
+body.dark-mode .summary-item {
+
+    border-color: #272d3a;
+}
+
+
+body.dark-mode .summary-label {
+
+    color: #9ca3af;
+}
+
+
+body.dark-mode .summary-item strong {
+
+    color: #f3f4f6;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .insights-summary {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .summary-item:nth-child(2) {
+
+        border-right: none;
+    }
+
+
+    .summary-item:nth-child(3) {
+
+        border-top: 1px solid #eef0f4;
+    }
+
+
+    .summary-item:nth-child(4) {
+
+        border-top: 1px solid #eef0f4;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .insights-summary {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+
+    .summary-item {
+
+        border-right: none;
+
+        border-bottom: 1px solid #eef0f4;
+    }
+
+
+    .summary-item:last-child {
+
+        border-bottom: none;
+    }
+
+
+    .insight-card-header {
+
+        padding: 16px;
+    }
+
+
+    .insight-list,
+    .recommendation-list {
+
+        padding: 14px;
+    }
+
+
+    .ai-insight-item,
+    .ai-recommendation-item {
+
+        padding: 12px;
+    }
+}

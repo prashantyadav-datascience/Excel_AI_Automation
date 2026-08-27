@@ -1,0 +1,715 @@
+/* =========================================================
+   EXCEL AI AUTOMATION
+   STEP 5 — INTERACTIVE VISUALIZATIONS
+   visualization.css
+========================================================= */
+
+
+/* =========================================================
+   VISUALIZATION SECTION
+========================================================= */
+
+.visualization-section {
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.visualization-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.25rem;
+}
+
+.visualization-header h2,
+.visualization-header h3 {
+    margin-bottom: 0.35rem;
+    font-weight: 700;
+}
+
+.visualization-header p {
+    margin-bottom: 0;
+    color: #6c757d;
+}
+
+
+/* =========================================================
+   FILE SELECTOR
+========================================================= */
+
+.visualization-file-selector {
+    min-width: 250px;
+    max-width: 350px;
+}
+
+.visualization-file-selector label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+}
+
+.visualization-file-selector select {
+    min-height: 40px;
+}
+
+
+/* =========================================================
+   TOOLBAR
+========================================================= */
+
+.visualization-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+
+    padding: 0.85rem 1rem;
+
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 0.75rem;
+
+    margin-bottom: 1.25rem;
+}
+
+.visualization-toolbar-left,
+.visualization-toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   CHART GRID
+========================================================= */
+
+.visualization-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 1.25rem;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   CHART CARD
+========================================================= */
+
+.visualization-card {
+    background: #ffffff;
+
+    border: 1px solid #e9ecef;
+    border-radius: 0.9rem;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 0.125rem 0.5rem
+        rgba(0, 0, 0, 0.04);
+
+    min-width: 0;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.visualization-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0.5rem 1.25rem
+        rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   CHART CARD HEADER
+========================================================= */
+
+.visualization-card-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 0.75rem;
+
+    padding: 1rem 1.1rem;
+
+    border-bottom: 1px solid #f0f0f0;
+
+    background: #ffffff;
+}
+
+.visualization-card-title {
+    display: flex;
+    align-items: center;
+
+    gap: 0.65rem;
+
+    min-width: 0;
+}
+
+.visualization-card-title h5 {
+    margin: 0;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.visualization-card-title small {
+    display: block;
+
+    margin-top: 0.15rem;
+
+    color: #6c757d;
+
+    font-size: 0.78rem;
+}
+
+
+/* =========================================================
+   CHART ICON
+========================================================= */
+
+.visualization-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 0.65rem;
+
+    font-size: 1rem;
+}
+
+.visualization-icon-blue {
+    background: rgba(13, 110, 253, 0.1);
+    color: #0d6efd;
+}
+
+.visualization-icon-green {
+    background: rgba(25, 135, 84, 0.1);
+    color: #198754;
+}
+
+.visualization-icon-purple {
+    background: rgba(111, 66, 193, 0.1);
+    color: #6f42c1;
+}
+
+.visualization-icon-orange {
+    background: rgba(253, 126, 20, 0.1);
+    color: #fd7e14;
+}
+
+
+/* =========================================================
+   CHART BODY
+========================================================= */
+
+.visualization-card-body {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 330px;
+
+    padding: 1rem;
+}
+
+
+/* =========================================================
+   CANVAS CONTAINER
+========================================================= */
+
+.visualization-chart-container {
+    position: relative;
+
+    width: 100%;
+
+    height: 300px;
+
+    min-height: 300px;
+}
+
+.visualization-chart-container canvas {
+    display: block;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   LARGE CHART
+========================================================= */
+
+.visualization-card-wide {
+    grid-column: span 2;
+}
+
+.visualization-card-wide
+.visualization-chart-container {
+    height: 360px;
+    min-height: 360px;
+}
+
+
+/* =========================================================
+   DONUT / PIE
+========================================================= */
+
+.visualization-pie-container {
+    position: relative;
+
+    width: 100%;
+
+    height: 320px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.visualization-pie-container canvas {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/* =========================================================
+   CORRELATION
+========================================================= */
+
+.visualization-correlation {
+    width: 100%;
+
+    overflow-x: auto;
+
+    padding-bottom: 0.5rem;
+}
+
+.visualization-correlation-grid {
+    display: grid;
+
+    gap: 2px;
+
+    min-width: 500px;
+}
+
+.correlation-cell {
+    min-width: 55px;
+    min-height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0.75rem;
+
+    border-radius: 3px;
+}
+
+.correlation-label {
+    font-weight: 600;
+
+    color: #495057;
+
+    background: #f8f9fa;
+}
+
+.correlation-value {
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   AUTO CHART TYPE BADGE
+========================================================= */
+
+.visualization-chart-type {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 0.25rem 0.55rem;
+
+    border-radius: 999px;
+
+    background: #f8f9fa;
+
+    color: #6c757d;
+
+    font-size: 0.72rem;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.visualization-empty {
+    min-height: 260px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 2rem;
+
+    color: #6c757d;
+}
+
+.visualization-empty-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 1rem;
+
+    border-radius: 50%;
+
+    background: #f8f9fa;
+
+    font-size: 1.5rem;
+}
+
+.visualization-empty h5 {
+    margin-bottom: 0.4rem;
+
+    color: #343a40;
+
+    font-weight: 700;
+}
+
+.visualization-empty p {
+    max-width: 500px;
+
+    margin-bottom: 0;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   LOADING STATE
+========================================================= */
+
+.visualization-loading {
+    min-height: 260px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: #6c757d;
+}
+
+.visualization-loading .spinner-border {
+    margin-bottom: 0.75rem;
+}
+
+.visualization-loading p {
+    margin: 0;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   ERROR STATE
+========================================================= */
+
+.visualization-error {
+    border-radius: 0.75rem;
+
+    padding: 1rem;
+
+    margin-bottom: 1rem;
+}
+
+
+/* =========================================================
+   SUMMARY CARDS
+========================================================= */
+
+.visualization-summary-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 1rem;
+
+    margin-bottom: 1.25rem;
+}
+
+.visualization-summary-card {
+    background: #ffffff;
+
+    border: 1px solid #e9ecef;
+
+    border-radius: 0.8rem;
+
+    padding: 1rem;
+
+    min-width: 0;
+}
+
+.visualization-summary-label {
+    display: block;
+
+    margin-bottom: 0.35rem;
+
+    color: #6c757d;
+
+    font-size: 0.78rem;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.04em;
+}
+
+.visualization-summary-value {
+    display: block;
+
+    font-size: 1.5rem;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    color: #212529;
+}
+
+
+/* =========================================================
+   DATASET INFO
+========================================================= */
+
+.visualization-dataset-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.6rem;
+
+    flex-wrap: wrap;
+
+    color: #6c757d;
+
+    font-size: 0.85rem;
+}
+
+.visualization-dataset-name {
+    color: #212529;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   DARK MODE SUPPORT
+========================================================= */
+
+body.dark-mode .visualization-toolbar,
+body.dark-mode .visualization-card,
+body.dark-mode .visualization-card-header,
+body.dark-mode .visualization-summary-card {
+    background: #1f2937;
+
+    border-color: #374151;
+}
+
+body.dark-mode .visualization-card-header {
+    border-bottom-color: #374151;
+}
+
+body.dark-mode .visualization-card-title h5,
+body.dark-mode .visualization-summary-value,
+body.dark-mode .visualization-empty h5 {
+    color: #f8f9fa;
+}
+
+body.dark-mode .visualization-card-title small,
+body.dark-mode .visualization-header p,
+body.dark-mode .visualization-empty,
+body.dark-mode .visualization-loading,
+body.dark-mode .visualization-summary-label,
+body.dark-mode .visualization-dataset-info {
+    color: #adb5bd;
+}
+
+body.dark-mode .visualization-chart-type {
+    background: #374151;
+
+    color: #d1d5db;
+}
+
+body.dark-mode .visualization-empty-icon {
+    background: #374151;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .visualization-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .visualization-card-wide {
+        grid-column: span 1;
+    }
+
+    .visualization-summary-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .visualization-header {
+        flex-direction: column;
+    }
+
+    .visualization-file-selector {
+        width: 100%;
+        max-width: none;
+    }
+
+    .visualization-toolbar {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .visualization-toolbar-left,
+    .visualization-toolbar-right {
+        width: 100%;
+    }
+
+    .visualization-card-body {
+        padding: 0.75rem;
+    }
+
+    .visualization-chart-container {
+        height: 260px;
+        min-height: 260px;
+    }
+
+    .visualization-card-wide
+    .visualization-chart-container {
+        height: 300px;
+        min-height: 300px;
+    }
+
+    .visualization-summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .visualization-pie-container {
+        height: 270px;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.visualization-card button:focus-visible,
+.visualization-toolbar button:focus-visible,
+.visualization-file-selector select:focus-visible {
+    outline: 3px solid rgba(13, 110, 253, 0.25);
+
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print {
+
+    .visualization-toolbar,
+    #refreshVisualizationBtn {
+        display: none !important;
+    }
+
+    .visualization-grid {
+        display: block;
+    }
+
+    .visualization-card {
+        page-break-inside: avoid;
+
+        margin-bottom: 1rem;
+
+        box-shadow: none;
+    }
+
+}

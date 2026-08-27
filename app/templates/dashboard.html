@@ -1,0 +1,2147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Excel AI Automation — Dashboard</title>
+
+
+    <!-- =====================================================
+         BOOTSTRAP
+    ====================================================== -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         BOOTSTRAP ICONS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         DASHBOARD STATE CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="/static/css/dashboard-states.css"
+    >
+
+
+    <!-- =====================================================
+         DASHBOARD CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="/static/css/dashboard.css"
+    >
+
+
+    <!-- =====================================================
+         KPI CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="/static/css/kpi.css"
+    >
+
+
+    <!-- =====================================================
+         BUSINESS INSIGHTS CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="/static/css/insights.css"
+    >
+
+
+    <!-- =====================================================
+         VISUALIZATION CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="/static/css/visualization.css"
+    >
+
+
+    <!-- =====================================================
+         CHART.JS
+    ====================================================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"
+    ></script>
+
+</head>
+
+
+<body>
+
+
+<div class="app-wrapper">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+
+        <!-- =================================================
+             EXCEL AI AUTOMATION BRAND
+        ================================================== -->
+
+        <div class="sidebar-brand">
+
+
+            <div class="excel-ai-logo">
+
+                <span class="excel-ai-logo-letter">
+                    E
+                </span>
+
+                <span class="excel-ai-logo-sparkle">
+                    ✦
+                </span>
+
+            </div>
+
+
+            <div class="excel-ai-brand-text">
+
+                <strong>
+                    Excel AI
+                </strong>
+
+                <small>
+                    Automation
+                </small>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             MAIN
+        ================================================== -->
+
+        <div class="sidebar-section">
+
+            <span>
+                MAIN
+            </span>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+
+            <a
+                href="/dashboard"
+                class="nav-item active"
+            >
+
+                <span class="nav-icon">
+                    ▦
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="/upload"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ↑
+                </span>
+
+                <span>
+                    Upload Data
+                </span>
+
+            </a>
+
+
+            <a
+                href="/files"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ◫
+                </span>
+
+                <span>
+                    My Files
+                </span>
+
+            </a>
+
+        </nav>
+
+
+
+        <!-- =================================================
+             ANALYTICS
+        ================================================== -->
+
+        <div class="sidebar-section">
+
+            <span>
+                ANALYTICS
+            </span>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+
+            <a
+                href="#advancedAnalyticsSection"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ◈
+                </span>
+
+                <span>
+                    Data Cleaning
+                </span>
+
+            </a>
+
+
+            <a
+                href="#aiBusinessInsightsSection"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ✦
+                </span>
+
+                <span>
+                    AI Insights
+                </span>
+
+            </a>
+
+
+            <a
+                href="#visualizationSection"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ◒
+                </span>
+
+                <span>
+                    Visualizations
+                </span>
+
+            </a>
+
+
+            <a
+                href="#advancedAnalyticsSection"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ↗
+                </span>
+
+                <span>
+                    Prediction
+                </span>
+
+            </a>
+
+
+            <a
+                href="#advancedAnalyticsSection"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ▤
+                </span>
+
+                <span>
+                    Reports
+                </span>
+
+            </a>
+
+        </nav>
+
+
+
+        <!-- =================================================
+             SIDEBAR BOTTOM
+        ================================================== -->
+
+        <div class="sidebar-bottom">
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ⚙
+                </span>
+
+                <span>
+                    Settings
+                </span>
+
+            </a>
+
+
+            <button
+                class="logout-button"
+                id="logoutButton"
+                type="button"
+            >
+
+                <span class="nav-icon">
+                    ⇥
+                </span>
+
+                <span>
+                    Logout
+                </span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOP NAVBAR
+        ================================================== -->
+
+        <header class="topbar">
+
+
+            <div class="topbar-left">
+
+
+                <button
+                    class="menu-button"
+                    id="menuButton"
+                    type="button"
+                >
+                    ☰
+                </button>
+
+
+                <div>
+
+                    <h5>
+                        Dashboard
+                    </h5>
+
+                    <span>
+                        Analytics overview
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+
+                <button
+                    class="theme-button"
+                    id="themeButton"
+                    title="Toggle theme"
+                    type="button"
+                >
+                    ◐
+                </button>
+
+
+                <div class="notification">
+                    🔔
+                </div>
+
+
+                <div class="user-menu">
+
+
+                    <div
+                        class="user-avatar"
+                        id="userAvatar"
+                    >
+                        U
+                    </div>
+
+
+                    <div class="user-info">
+
+
+                        <strong id="userName">
+                            User
+                        </strong>
+
+
+                        <small id="userEmail">
+                            user@example.com
+                        </small>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =====================================================
+             DASHBOARD CONTENT
+        ====================================================== -->
+
+        <section class="dashboard-container">
+
+
+            <!-- =================================================
+                 WELCOME
+            ================================================== -->
+
+            <div class="welcome-section">
+
+
+                <div>
+
+
+                    <p class="eyebrow">
+                        OVERVIEW
+                    </p>
+
+
+                    <h1>
+
+                        Welcome back,
+
+                        <span id="welcomeName">
+                            User
+                        </span>
+
+                        👋
+
+                    </h1>
+
+
+                    <p>
+                        Here's what's happening with
+                        your data analytics workspace.
+                    </p>
+
+
+                </div>
+
+
+                <a
+                    href="/upload"
+                    class="primary-button"
+                >
+
+                    <span>
+                        +
+                    </span>
+
+                    Upload Dataset
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 DASHBOARD STAT CARDS
+            ================================================== -->
+
+            <div class="stats-grid">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon purple">
+                            ◫
+                        </div>
+
+                        <span class="stat-label">
+                            FILES
+                        </span>
+
+                    </div>
+
+                    <h2 id="totalFiles">
+                        0
+                    </h2>
+
+                    <p>
+                        Uploaded datasets
+                    </p>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon blue">
+                            ▦
+                        </div>
+
+                        <span class="stat-label">
+                            ROWS
+                        </span>
+
+                    </div>
+
+                    <h2 id="totalRows">
+                        0
+                    </h2>
+
+                    <p>
+                        Total records analyzed
+                    </p>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon green">
+                            #
+                        </div>
+
+                        <span class="stat-label">
+                            COLUMNS
+                        </span>
+
+                    </div>
+
+                    <h2 id="totalColumns">
+                        0
+                    </h2>
+
+                    <p>
+                        Data attributes
+                    </p>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon orange">
+                            ✦
+                        </div>
+
+                        <span class="stat-label">
+                            STATUS
+                        </span>
+
+                    </div>
+
+                    <h2>
+                        Ready
+                    </h2>
+
+                    <p>
+                        Analytics engine
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =====================================================
+                 AI KPI SECTION
+            ====================================================== -->
+
+            <section class="kpi-section mt-4">
+
+
+                <div
+                    class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-3"
+                >
+
+                    <div>
+
+                        <h2 class="section-title">
+                            Intelligent KPIs
+                        </h2>
+
+                        <p class="text-muted mb-0">
+                            Automatically generated from your selected dataset
+                        </p>
+
+                    </div>
+
+
+                    <div class="kpi-file-selector">
+
+                        <label
+                            for="kpiFileSelector"
+                            class="form-label mb-1"
+                        >
+
+                            <strong>
+                                Select Dataset
+                            </strong>
+
+                        </label>
+
+
+                        <select
+                            id="kpiFileSelector"
+                            class="form-select"
+                            aria-label="Select dataset for KPI analysis"
+                        >
+
+                            <option value="">
+                                Select uploaded file...
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="kpi-toolbar mb-4">
+
+                    <div class="kpi-summary">
+
+
+                        <div
+                            id="kpiCategoryFilters"
+                            class="kpi-category-filters"
+                        >
+
+                            <button
+                                type="button"
+                                class="kpi-filter-button active"
+                                data-kpi-category="All"
+                            >
+                                All
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="kpi-filter-button"
+                                data-kpi-category="Sales"
+                            >
+                                Sales
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="kpi-filter-button"
+                                data-kpi-category="Customer"
+                            >
+                                Customer
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="kpi-filter-button"
+                                data-kpi-category="Finance"
+                            >
+                                Finance
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="kpi-filter-button"
+                                data-kpi-category="General"
+                            >
+                                General
+                            </button>
+
+                        </div>
+
+
+                        <span class="kpi-current-file">
+
+                            <i class="fa-solid fa-file-excel"></i>
+
+                            <span id="kpiFileName">
+                                Dataset
+                            </span>
+
+                        </span>
+
+
+                        <span class="badge bg-primary ms-2">
+
+                            <span id="totalKPI">
+                                0
+                            </span>
+
+                            KPIs
+
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-outline-secondary btn-sm"
+                        id="refreshKPIButton"
+                    >
+
+                        <i class="fa-solid fa-rotate"></i>
+
+                        Refresh
+
+                    </button>
+
+                </div>
+
+
+
+                <div
+                    id="kpiContainer"
+                    class="row"
+                >
+
+                    <div class="col-12">
+
+                        <div class="kpi-loading">
+
+                            <div
+                                class="spinner-border"
+                                role="status"
+                            ></div>
+
+                            <p>
+                                Preparing KPI analytics...
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================================
+                 AI BUSINESS INSIGHTS
+            ====================================================== -->
+
+            <section
+                class="insights-section mt-4"
+                id="aiBusinessInsightsSection"
+            >
+
+
+                <div
+                    class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-3"
+                >
+
+                    <div>
+
+                        <p class="eyebrow">
+                            AI ANALYTICS
+                        </p>
+
+                        <h2 class="section-title">
+                            AI Business Insights
+                        </h2>
+
+                        <p class="text-muted mb-0">
+                            Intelligent insights and recommendations generated from your dataset.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-outline-primary btn-sm"
+                        id="refreshInsightsButton"
+                    >
+
+                        <i class="fa-solid fa-rotate"></i>
+
+                        Refresh Insights
+
+                    </button>
+
+                </div>
+
+
+
+                <div
+                    id="insightsStatus"
+                    class="alert alert-light border d-none"
+                >
+                    Preparing AI business insights...
+                </div>
+
+
+
+                <div
+                    id="insightsContainer"
+                    class="row g-4"
+                >
+
+
+                    <div class="col-lg-6">
+
+                        <div class="insight-card h-100">
+
+                            <div class="insight-card-header">
+
+                                <div
+                                    class="insight-icon insight-icon-blue"
+                                >
+
+                                    <i class="fa-solid fa-chart-line"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h5>
+                                        Business Insights
+                                    </h5>
+
+                                    <small>
+                                        What your data is telling you
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <div
+                                id="businessInsightsList"
+                                class="insight-list"
+                            >
+
+                                <div class="insight-loading">
+
+                                    <div
+                                        class="spinner-border spinner-border-sm"
+                                        role="status"
+                                    ></div>
+
+                                    <span>
+                                        Loading insights...
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="col-lg-6">
+
+                        <div class="insight-card h-100">
+
+                            <div class="insight-card-header">
+
+                                <div
+                                    class="insight-icon insight-icon-green"
+                                >
+
+                                    <i class="fa-solid fa-lightbulb"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h5>
+                                        Recommendations
+                                    </h5>
+
+                                    <small>
+                                        Suggested actions based on your data
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <div
+                                id="businessRecommendationsList"
+                                class="recommendation-list"
+                            >
+
+                                <div class="insight-loading">
+
+                                    <div
+                                        class="spinner-border spinner-border-sm"
+                                        role="status"
+                                    ></div>
+
+                                    <span>
+                                        Preparing recommendations...
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div
+                    id="insightsSummary"
+                    class="insights-summary mt-4 d-none"
+                >
+
+                    <div class="summary-item">
+
+                        <span class="summary-label">
+                            Dataset
+                        </span>
+
+                        <strong id="insightsFileName">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <span class="summary-label">
+                            Records
+                        </span>
+
+                        <strong id="insightsRows">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <span class="summary-label">
+                            KPIs Analyzed
+                        </span>
+
+                        <strong id="insightsKPICount">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <span class="summary-label">
+                            AI Status
+                        </span>
+
+                        <strong class="text-success">
+                            Ready
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================================
+                 ADVANCED ANALYTICS
+            ====================================================== -->
+
+            <section
+                id="advancedAnalyticsSection"
+                class="mt-4"
+            >
+
+
+                <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                >
+
+                    <div>
+
+                        <h3 class="mb-1">
+
+                            <i class="bi bi-graph-up-arrow"></i>
+
+                            Advanced Analytics
+
+                        </h3>
+
+                        <p class="text-muted mb-0">
+
+                            Automated statistical analysis, trends,
+                            correlations and anomaly detection.
+
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        id="refreshAnalyticsBtn"
+                        class="btn btn-primary"
+                        type="button"
+                    >
+
+                        <i class="bi bi-arrow-clockwise"></i>
+
+                        Refresh Analytics
+
+                    </button>
+
+                </div>
+
+
+
+                <div
+                    id="analyticsLoading"
+                    class="alert alert-info d-none"
+                >
+
+                    <span
+                        class="spinner-border spinner-border-sm me-2"
+                    ></span>
+
+                    Generating advanced analytics...
+
+                </div>
+
+
+                <div
+                    id="analyticsError"
+                    class="alert alert-danger d-none"
+                ></div>
+
+
+                <div
+                    id="analyticsEmpty"
+                    class="alert alert-secondary"
+                >
+
+                    Select a dataset to view advanced analytics.
+
+                </div>
+
+
+                <div
+                    id="analyticsContent"
+                    class="d-none"
+                >
+
+
+                    <div class="row g-3 mb-4">
+
+
+                        <div class="col-md-3">
+
+                            <div class="card shadow-sm h-100">
+
+                                <div class="card-body">
+
+                                    <small class="text-muted">
+                                        Rows
+                                    </small>
+
+                                    <h3
+                                        id="analyticsRows"
+                                        class="mt-2 mb-0"
+                                    >
+                                        0
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-3">
+
+                            <div class="card shadow-sm h-100">
+
+                                <div class="card-body">
+
+                                    <small class="text-muted">
+                                        Columns
+                                    </small>
+
+                                    <h3
+                                        id="analyticsColumns"
+                                        class="mt-2 mb-0"
+                                    >
+                                        0
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-3">
+
+                            <div class="card shadow-sm h-100">
+
+                                <div class="card-body">
+
+                                    <small class="text-muted">
+                                        Numeric Columns
+                                    </small>
+
+                                    <h3
+                                        id="analyticsNumericColumns"
+                                        class="mt-2 mb-0"
+                                    >
+                                        0
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-3">
+
+                            <div class="card shadow-sm h-100">
+
+                                <div class="card-body">
+
+                                    <small class="text-muted">
+                                        Outlier Columns
+                                    </small>
+
+                                    <h3
+                                        id="analyticsOutlierColumns"
+                                        class="mt-2 mb-0"
+                                    >
+                                        0
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="card shadow-sm mb-4">
+
+                        <div class="card-header">
+
+                            <h5 class="mb-0">
+
+                                <i class="bi bi-bar-chart"></i>
+
+                                Statistical Summary
+
+                            </h5>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <div class="table-responsive">
+
+                                <table
+                                    class="table table-hover align-middle"
+                                >
+
+                                    <thead>
+
+                                        <tr>
+
+                                            <th>Column</th>
+                                            <th>Count</th>
+                                            <th>Mean</th>
+                                            <th>Median</th>
+                                            <th>Minimum</th>
+                                            <th>Maximum</th>
+                                            <th>Std. Dev.</th>
+
+                                        </tr>
+
+                                    </thead>
+
+
+                                    <tbody
+                                        id="analyticsStatisticsTable"
+                                    >
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="row g-4 mb-4">
+
+
+                        <div class="col-lg-7">
+
+                            <div class="card shadow-sm h-100">
+
+                                <div class="card-header">
+
+                                    <h5 class="mb-0">
+
+                                        <i class="bi bi-link-45deg"></i>
+
+                                        Strong Correlations
+
+                                    </h5>
+
+                                </div>
+
+
+                                <div class="card-body">
+
+                                    <div
+                                        id="analyticsCorrelation"
+                                    ></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="col-lg-5">
+
+                            <div class="card shadow-sm h-100">
+
+                                <div class="card-header">
+
+                                    <h5 class="mb-0">
+
+                                        <i class="bi bi-exclamation-triangle"></i>
+
+                                        Outlier Detection
+
+                                    </h5>
+
+                                </div>
+
+
+                                <div class="card-body">
+
+                                    <div
+                                        id="analyticsOutliers"
+                                    ></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="card shadow-sm mb-4">
+
+                        <div class="card-header">
+
+                            <h5 class="mb-0">
+
+                                <i class="bi bi-graph-up"></i>
+
+                                Trend Detection
+
+                            </h5>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <div class="table-responsive">
+
+                                <table
+                                    class="table table-hover"
+                                >
+
+                                    <thead>
+
+                                        <tr>
+
+                                            <th>Column</th>
+                                            <th>Direction</th>
+                                            <th>Change</th>
+                                            <th>First Value</th>
+                                            <th>Last Value</th>
+
+                                        </tr>
+
+                                    </thead>
+
+
+                                    <tbody
+                                        id="analyticsTrendsTable"
+                                    ></tbody>
+
+                                </table>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="card shadow-sm mb-4">
+
+                        <div class="card-header">
+
+                            <h5 class="mb-0">
+
+                                <i class="bi bi-distribute-vertical"></i>
+
+                                Distribution Analysis
+
+                            </h5>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <div
+                                id="analyticsDistributions"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="row g-4">
+
+
+                        <div class="col-lg-6">
+
+                            <div class="card shadow-sm h-100">
+
+                                <div class="card-header">
+
+                                    <h5 class="mb-0">
+                                        💡 Analytics Insights
+                                    </h5>
+
+                                </div>
+
+
+                                <div
+                                    id="analyticsInsights"
+                                    class="card-body"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="col-lg-6">
+
+                            <div class="card shadow-sm h-100">
+
+                                <div class="card-header">
+
+                                    <h5 class="mb-0">
+                                        🎯 Recommendations
+                                    </h5>
+
+                                </div>
+
+
+                                <div
+                                    id="analyticsRecommendations"
+                                    class="card-body"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================================
+                 INTERACTIVE DATA VISUALIZATION
+            ====================================================== -->
+
+            <section
+                id="visualizationSection"
+                class="visualization-section mt-4"
+            >
+
+
+                <div
+                    class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-3"
+                >
+
+                    <div>
+
+                        <p class="eyebrow">
+                            VISUAL ANALYTICS
+                        </p>
+
+                        <h2 class="section-title">
+                            Interactive Data Visualization
+                        </h2>
+
+                        <p class="text-muted mb-0">
+                            Automatically generated charts based on your selected dataset.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        id="refreshVisualizationBtn"
+                        type="button"
+                        class="btn btn-outline-primary"
+                    >
+
+                        <i class="fa-solid fa-rotate"></i>
+
+                        Refresh Charts
+
+                    </button>
+
+                </div>
+
+
+
+                <div
+                    id="visualizationLoading"
+                    class="alert alert-info d-none"
+                >
+
+                    <span
+                        class="spinner-border spinner-border-sm me-2"
+                    ></span>
+
+                    Generating interactive visualizations...
+
+                </div>
+
+
+                <div
+                    id="visualizationError"
+                    class="alert alert-danger d-none"
+                ></div>
+
+
+                <div
+                    id="visualizationEmpty"
+                    class="alert alert-secondary"
+                >
+
+                    Select a dataset to generate interactive visualizations.
+
+                </div>
+
+
+                <div
+                    id="visualizationContent"
+                    class="d-none"
+                >
+
+
+                    <div class="card shadow-sm mb-4">
+
+                        <div class="card-body">
+
+                            <div
+                                class="d-flex justify-content-between align-items-center flex-wrap gap-3"
+                            >
+
+                                <div>
+
+                                    <small class="text-muted">
+                                        Current Dataset
+                                    </small>
+
+                                    <h5
+                                        id="visualizationFileName"
+                                        class="mb-0 mt-1"
+                                    >
+                                        Dataset
+                                    </h5>
+
+                                </div>
+
+
+                                <div class="visualization-meta">
+
+                                    <span class="badge bg-primary">
+
+                                        Rows:
+
+                                        <span id="visualizationRows">
+                                            0
+                                        </span>
+
+                                    </span>
+
+
+                                    <span class="badge bg-secondary">
+
+                                        Columns:
+
+                                        <span id="visualizationColumns">
+                                            0
+                                        </span>
+
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="row g-4">
+
+
+                        <div class="col-lg-6">
+
+                            <div
+                                class="card shadow-sm visualization-card h-100"
+                            >
+
+                                <div class="card-header">
+
+                                    <h5 class="mb-0">
+
+                                        <i class="fa-solid fa-chart-column"></i>
+
+                                        Category Comparison
+
+                                    </h5>
+
+                                </div>
+
+
+                                <div class="card-body chart-container">
+
+                                    <canvas id="barChart"></canvas>
+
+                                    <div
+                                        id="barChartEmpty"
+                                        class="chart-empty d-none"
+                                    >
+                                        No suitable categorical data available.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="col-lg-6">
+
+                            <div
+                                class="card shadow-sm visualization-card h-100"
+                            >
+
+                                <div class="card-header">
+
+                                    <h5 class="mb-0">
+
+                                        <i class="fa-solid fa-chart-line"></i>
+
+                                        Trend Analysis
+
+                                    </h5>
+
+                                </div>
+
+
+                                <div class="card-body chart-container">
+
+                                    <canvas id="lineChart"></canvas>
+
+                                    <div
+                                        id="lineChartEmpty"
+                                        class="chart-empty d-none"
+                                    >
+                                        No time-series data available.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="col-lg-6">
+
+                            <div
+                                class="card shadow-sm visualization-card h-100"
+                            >
+
+                                <div class="card-header">
+
+                                    <h5 class="mb-0">
+
+                                        <i class="fa-solid fa-chart-pie"></i>
+
+                                        Category Distribution
+
+                                    </h5>
+
+                                </div>
+
+
+                                <div class="card-body chart-container">
+
+                                    <canvas id="donutChart"></canvas>
+
+                                    <div
+                                        id="donutChartEmpty"
+                                        class="chart-empty d-none"
+                                    >
+                                        No suitable category distribution available.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="col-lg-6">
+
+                            <div
+                                class="card shadow-sm visualization-card h-100"
+                            >
+
+                                <div class="card-header">
+
+                                    <h5 class="mb-0">
+
+                                        <i class="fa-solid fa-link"></i>
+
+                                        Correlation Analysis
+
+                                    </h5>
+
+                                </div>
+
+
+                                <div class="card-body">
+
+                                    <div
+                                        id="correlationVisualization"
+                                        class="correlation-list"
+                                    >
+
+                                        <div class="text-muted">
+                                            Select a dataset to analyze correlations.
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="col-12">
+
+                            <div
+                                class="card shadow-sm visualization-card"
+                            >
+
+                                <div class="card-header">
+
+                                    <h5 class="mb-0">
+
+                                        <i class="fa-solid fa-chart-area"></i>
+
+                                        Numeric Distribution
+
+                                    </h5>
+
+                                </div>
+
+
+                                <div
+                                    class="card-body chart-container distribution-chart-container"
+                                >
+
+                                    <canvas
+                                        id="distributionChart"
+                                    ></canvas>
+
+                                    <div
+                                        id="distributionChartEmpty"
+                                        class="chart-empty d-none"
+                                    >
+                                        No numeric data available.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================================
+                 QUICK ACTIONS
+            ====================================================== -->
+
+            <div class="section-heading">
+
+
+                <div>
+
+                    <h3>
+                        Quick Actions
+                    </h3>
+
+                    <p>
+                        Start working with your data
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="quick-grid">
+
+
+                <a
+                    href="/upload"
+                    class="quick-card"
+                >
+
+                    <div class="quick-icon purple">
+                        ↑
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Upload Data
+                        </h4>
+
+                        <p>
+                            Import Excel or CSV files
+                        </p>
+
+                    </div>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="#aiBusinessInsightsSection"
+                    class="quick-card"
+                >
+
+                    <div class="quick-icon blue">
+                        ✦
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            AI Insights
+                        </h4>
+
+                        <p>
+                            Discover patterns in your data
+                        </p>
+
+                    </div>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="#visualizationSection"
+                    class="quick-card"
+                >
+
+                    <div class="quick-icon green">
+                        ◒
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Visualizations
+                        </h4>
+
+                        <p>
+                            Create intelligent charts
+                        </p>
+
+                    </div>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="#advancedAnalyticsSection"
+                    class="quick-card"
+                >
+
+                    <div class="quick-icon orange">
+                        ▤
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Reports
+                        </h4>
+
+                        <p>
+                            Generate analytics reports
+                        </p>
+
+                    </div>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- =====================================================
+                 RECENT FILES
+            ====================================================== -->
+
+            <div
+                class="section-heading recent-heading"
+            >
+
+                <div>
+
+                    <h3>
+                        Recent Files
+                    </h3>
+
+                    <p>
+                        Your latest uploaded datasets
+                    </p>
+
+                </div>
+
+
+                <a href="/files">
+                    View all
+                </a>
+
+            </div>
+
+
+
+            <div class="table-card">
+
+
+                <div
+                    class="empty-state"
+                    id="emptyState"
+                >
+
+                    <div class="empty-icon">
+                        ◫
+                    </div>
+
+                    <h4>
+                        No datasets yet
+                    </h4>
+
+                    <p>
+                        Upload your first Excel or CSV
+                        file to start analyzing your data.
+                    </p>
+
+                    <a
+                        href="/upload"
+                        class="primary-button"
+                    >
+                        Upload Dataset
+                    </a>
+
+                </div>
+
+
+
+                <div
+                    id="filesTableContainer"
+                    class="table-responsive d-none"
+                >
+
+                    <table class="files-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>File</th>
+                                <th>Rows</th>
+                                <th>Columns</th>
+                                <th>Uploaded</th>
+                                <th>Action</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody
+                            id="filesTableBody"
+                        ></tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+
+
+<!-- =====================================================
+     TOAST
+====================================================== -->
+
+<div
+    id="toastContainer"
+    class="toast-container"
+></div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script
+    src="/static/js/dashboard.js"
+></script>
+
+<script
+    src="/static/js/dashboard-states.js"
+></script>
+
+
+<script
+    src="/static/js/kpi.js"
+></script>
+
+
+<script
+    src="/static/js/insights.js"
+></script>
+
+
+<script
+    src="/static/js/analytics.js"
+></script>
+
+
+<script
+    src="/static/js/visualization.js"
+></script>
+
+
+<script
+    src="/static/js/dashboard-sync.js"
+></script>
+
+
+</body>
+
+</html>

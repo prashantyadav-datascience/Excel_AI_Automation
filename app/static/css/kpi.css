@@ -1,0 +1,456 @@
+/* =========================================================
+   EXCEL AI AUTOMATION
+   KPI INTERACTIVE UI
+   
+========================================================= */
+
+.kpi-section {
+    position: relative;
+}
+
+
+/* =========================================================
+   KPI FILE SELECTOR
+========================================================= */
+
+.kpi-file-selector {
+    min-width: 260px;
+}
+
+
+.kpi-file-selector label {
+    color: #475569;
+    font-size: 13px;
+}
+
+
+#kpiFileSelector {
+    border-radius: 11px;
+
+    border: 1px solid #dbe2ea;
+
+    min-height: 42px;
+
+    font-size: 14px;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+
+#kpiFileSelector:hover {
+    border-color: #93c5fd;
+}
+
+
+#kpiFileSelector:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, .10);
+}
+
+
+/* =========================================================
+   KPI TOOLBAR
+========================================================= */
+
+.kpi-toolbar {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+.kpi-summary {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+
+.kpi-current-file {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 7px 12px;
+
+    border-radius: 10px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    color: #475569;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   CATEGORY FILTERS
+========================================================= */
+
+.kpi-category-filters {
+    display: flex;
+
+    gap: 7px;
+
+    flex-wrap: wrap;
+}
+
+
+.kpi-filter-button {
+    border: 1px solid #dbe2ea;
+
+    background: #ffffff;
+
+    color: #64748b;
+
+    padding: 7px 13px;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.kpi-filter-button:hover {
+    transform: translateY(-2px);
+
+    border-color: #93c5fd;
+
+    color: #2563eb;
+
+    box-shadow:
+        0 4px 12px rgba(37, 99, 235, .08);
+}
+
+
+.kpi-filter-button.active {
+    background: #2563eb;
+
+    border-color: #2563eb;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 5px 15px rgba(37, 99, 235, .20);
+}
+
+
+/* =========================================================
+   KPI CARD
+========================================================= */
+
+.kpi-card {
+    position: relative;
+
+    height: 100%;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border:
+        1px solid rgba(15, 23, 42, .07);
+
+    border-radius: 17px;
+
+    box-shadow:
+        0 7px 25px rgba(15, 23, 42, .06);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+
+.kpi-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2563eb,
+            #6366f1,
+            #22c55e
+        );
+}
+
+
+.kpi-card:hover {
+    transform: translateY(-6px);
+
+    border-color:
+        rgba(37, 99, 235, .18);
+
+    box-shadow:
+        0 15px 38px rgba(15, 23, 42, .12);
+}
+
+
+/* =========================================================
+   KPI CARD BODY
+========================================================= */
+
+.kpi-card .card-body {
+    padding: 20px;
+}
+
+
+.kpi-card h5,
+.kpi-card h4,
+.kpi-card h3 {
+    font-weight: 700;
+
+    color: #111827;
+}
+
+
+.kpi-card .kpi-value {
+    font-size: 28px;
+
+    font-weight: 800;
+
+    letter-spacing: -.6px;
+
+    color: #111827;
+}
+
+
+.kpi-card .kpi-label {
+    color: #64748b;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: .5px;
+}
+
+
+/* =========================================================
+   KPI ICON
+========================================================= */
+
+.kpi-icon {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    transition:
+        transform .25s ease;
+}
+
+
+.kpi-card:hover .kpi-icon {
+    transform:
+        scale(1.08)
+        rotate(-4deg);
+}
+
+
+/* =========================================================
+   KPI CATEGORY BADGE
+========================================================= */
+
+.kpi-category {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 5px 9px;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    background: #f1f5f9;
+
+    color: #475569;
+}
+
+
+/* =========================================================
+   KPI LOADING
+========================================================= */
+
+.kpi-loading {
+    min-height: 180px;
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    color: #64748b;
+
+    border:
+        1px dashed #cbd5e1;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f8fafc
+        );
+}
+
+
+/* =========================================================
+   KPI EMPTY
+========================================================= */
+
+.kpi-empty {
+    padding: 40px 20px;
+
+    text-align: center;
+
+    border:
+        1px dashed #cbd5e1;
+
+    border-radius: 16px;
+
+    background: #f8fafc;
+
+    color: #64748b;
+}
+
+
+/* =========================================================
+   KPI ERROR
+========================================================= */
+
+.kpi-error {
+    padding: 18px;
+
+    border-radius: 14px;
+
+    background: #fff7ed;
+
+    border:
+        1px solid #fed7aa;
+
+    color: #9a3412;
+}
+
+
+/* =========================================================
+   REFRESH
+========================================================= */
+
+#refreshKPIButton {
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+#refreshKPIButton:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 18px rgba(15, 23, 42, .10);
+}
+
+
+#refreshKPIButton.loading i {
+    animation:
+        kpiSpin .8s linear infinite;
+}
+
+
+@keyframes kpiSpin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .kpi-toolbar {
+        align-items: stretch;
+    }
+
+    .kpi-summary {
+        width: 100%;
+    }
+
+    .kpi-file-selector {
+        width: 100%;
+    }
+
+    #refreshKPIButton {
+        width: 100%;
+    }
+
+}
